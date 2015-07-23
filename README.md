@@ -1,2 +1,121 @@
-# heidsoft-ui
-æ„å»ºä¼ä¸šçº§åº”ç”¨å‰ç«¯ç»„ä»¶
+#Ç°¶Ë¹¹½¨
+```
+    1.±¾Ç°¶ËÓ¦ÓÃ×ñÑ­AMD¹æ·¶£¬Ê¹ÓÃrequirejs ½øĞĞÄ£¿é¹ÜÀí
+    2.loginÊÇÒ»¸öµ¥¶ÀµÄhtml
+    3.±¾Ó¦ÓÃÊÇÒ»¸öµ¥Ò³µÄÓ¦ÓÃ,Èë¿ÚÎÄ¼şÊÇmain.js
+    4.±¾Ó¦ÓÃµÄÂ·ÓÉÈë¿ÚÎÄ¼şÊÇroutes.js
+    5.±¾Ó¦ÓÃ¶¨ÒåÎÄ¼şÊÇapp.js
+    6.±¾Ó¦ÓÃUiÂ·ÓÉÊ¹ÓÃui.router
+    7.±¾Ó¦ÓÃµÄgridÊ¹ÓÃ ng-grid
+    8.Ä£¿éÒÀÀµÔ­Ôò
+        js\controllers\XxxController.js ÒµÎñ¿ØÖÆ
+          ÒÀÀµÓÚ
+            js\controllers\index.js Ä£¿éË÷Òı
+            ÒÀÀµÓÚ
+            js\controllers\module.js Ä£¿é¶¨Òå
+        Ö¸ÁîºÍ·şÎñ¶¨Òå²ÉÓÃºÍControllerÒ»ÑùµÄÔ­Ôò
+```
+##Ä¿Â¼½á¹¹
+```
+
+```
+##¿ª·¢¹¤¾ß
+```
+ 
+```
+
+##°²×°nodejs
+
+##°²×°bower
+	npm install -g bower
+##³õÊ¼»¯ui×é¼ş
+	bower init
+##ÒÀÀµ×é¼ş
+	bower install angular-ui-layout\#bower
+##We use Karma and jshint to ensure the quality of the code
+	npm install -g gulp
+	npm install && bower install
+	gulp
+##ui-layout
+	https://github.com/angular-ui/ui-layout
+##RequireJS
+	RequireJS»áÈÃÄãÒÔ²»Í¬ÓÚÍù³£µÄ·½Ê½È¥Ğ´JavaScript¡£Äã½«²»ÔÙÊ¹ÓÃscript±êÇ©ÔÚHTMLÖĞÒıÈëJSÎÄ¼ş£¬ÒÔ¼°²»ÓÃÍ¨¹ıscript±êÇ©Ë³ĞòÈ¥¹ÜÀíÒÀÀµ¹ØÏµ¡£
+#Angularjs 
+```
+services×÷Îªµ¥Àı¶ÔÏóÔÚĞèÒªµ½µÄÊ±ºò±»´´½¨£¬
+Ö»ÓĞÔÚÓ¦ÓÃÉúÃüÖÜÆÚ½áÊøµÄÊ±ºò£¨¹Ø±Õä¯ÀÀÆ÷£©²Å»á±»Çå³ı¡£
+¶øcontrollersÔÚ²»ĞèÒªµÄÊ±ºò¾Í»á±»Ïú»ÙÁË
+```
+
+##NgÖ¸Áî
+
+###ng-app
+```
+ng-appÉùÃ÷ËùÓĞ±»Ëü°üº¬µÄÔªËØ¶¼ÊôÓÚAngularJSÓ¦ÓÃÒ»Ñù
+```
+###ng-controller
+```
+ng-controllerÉùÃ÷ËùÓĞ±»Ëü°üº¬µÄÔªËØ¶¼ÊôÓÚÄ³¸ö¿ØÖÆÆ÷
+```
+
+#ui-router
+```
+¸ù¾İ×´Ì¬½øĞĞÂ·
+```
+###ng-view
+```
+ng-view ÊÇÒ»¸öÓÃÀ´°üº¬µ±Ç°Â·ÓÉ(/home, /about, or /contact)µÄÄ£°åµÄangularÖ¸Áî, 
+Ëü»á»ñµÃ»ùÓÚÌØ¶¨Â·ÓÉµÄÎÄ¼ş²¢½«ÆäÖîÈçµ½Ö÷²¼¾ÖÖĞ(index.html).
+Ö»ÊÇ¼òµ¥µØ´´½¨Ò»¸öÕ¼Î»·û£¬ÊÇÒ»¸öÏàÓ¦µÄÊÓÍ¼(HTML»òng-templateÊÓÍ¼)£¬¿ÉÒÔ¸ù¾İÅäÖÃÀ´·ÅÖÃ¡£
+    <div ng-app="mainApp">
+    ...
+       <div ng-view></div>
+    
+    </div>    
+```
+###ui-sref
+      
+```
+        ui-sref="index"  ×´Ì¬Â·ÓÉÖ¸Áî
+        ui-view  Ç¶Ì×ÊÓÍ¼Ö¸Áî
+        
+        ui-routerÌá¹©ÁËÈÃÎÒÃÇ¿ÉÒÔ×öÂ·ÓÉÇ¶Ì×ºÍÊÓÍ¼ÃüÃûµÄÌØĞÔ. ÎÒÃÇ½«ÔÚÊ¾ÀıÖĞ¿´µ½ui-routerÖĞ´æÔÚµÄËùÓĞÀàĞÍ
+```
+
+###ng-template
+
+```
+Ö¸ÁîÊÇÓÃÀ´´´½¨Ê¹ÓÃscript±êÇ©µÄHTMLÊÓÍ¼¡£Ëü°üº¬Ò»¸öÓÃÓÚÓÉ$routeProviderÓ³Éä¿ØÖÆÆ÷ÊÓÍ¼¡°id¡±ÊôĞÔ¡£
+    <div ng-app="mainApp">
+    ...
+       <script type="text/ng-template" id="addStudent.html">
+          <h2> Add Student </h2>
+             {{message}}
+       </script>
+    
+    </div>   
+```
+###$route
+
+```
+
+$route·şÎñÍ¨³£ºÍngViewÖ¸ÁîÒ»ÆğÊ¹ÓÃ¡£ngViewÖ¸ÁîµÄ½ÇÉ«ÊÇÎªµ±Ç°Â·ÓÉ°Ñ¶ÔÓ¦µÄÊÓÍ¼Ä£°åÔØÈëµ½²¼¾ÖÄ£°åÖĞ¡£
+
+```
+
+###°²×°grunt
+###°²×°grunt-init
+###°²×°grunt-init Ä£°å
+###°²×°grunt ²å¼ş
+####³£ÓÃ²å¼ş
+    1).grunt-contrib-uglify£ºÑ¹Ëõjs´úÂë
+    2).grunt-contrib-concat£ººÏ²¢jsÎÄ¼ş
+    3).grunt-contrib-qunit£ºµ¥Ôª²âÊÔ
+    4).grunt-contrib-jshint£ºjs´úÂë¼ì²é
+    5).grunt-contrib-watch£ºÎÄ¼ş¼à¿Ø
+    npm install grunt-contrib-uglify --save-dev
+    npm install grunt-contrib-concat --save-dev
+    npm install grunt-contrib-qunit --save-dev
+    npm install grunt-contrib-jshint --save-dev
+    npm install grunt-contrib-watch --save-dev
+    
