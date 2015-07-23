@@ -1,19 +1,19 @@
 #前端构建
 ```
-    1.本前端应用遵循AMD规范，使用requirejs 进行模块管理
-    2.login是一个单独的html
-    3.本应用是一个单页的应用,入口文件是main.js
-    4.本应用的路由入口文件是routes.js
-    5.本应用定义文件是app.js
-    6.本应用Ui路由使用ui.router
-    7.本应用的grid使用 ng-grid
-    8.模块依赖原则
-        js\controllers\XxxController.js 业务控制
-          依赖于
-            js\controllers\index.js 模块索引
-            依赖于
-            js\controllers\module.js 模块定义
-        指令和服务定义采用和Controller一样的原则
+1.本前端应用遵循AMD规范，使用requirejs 进行模块管理
+2.login是一个单独的html
+3.本应用是一个单页的应用,入口文件是main.js
+4.本应用的路由入口文件是routes.js
+5.本应用定义文件是app.js
+6.本应用Ui路由使用ui.router
+7.本应用的grid使用 ng-grid
+8.模块依赖原则
+	js\controllers\XxxController.js 业务控制
+	  依赖于
+		js\controllers\index.js 模块索引
+		依赖于
+		js\controllers\module.js 模块定义
+	指令和服务定义采用和Controller一样的原则
 ```
 ##目录结构
 ```
@@ -24,7 +24,7 @@
  
 ```
 
-##安装nodejs
+##nodejs
 
 ##安装bower
 	npm install -g bower
