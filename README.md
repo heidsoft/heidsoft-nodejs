@@ -1,3 +1,10 @@
+#目录结构
+```
+dist:
+全称是distribution。在某些框架中，
+因为开发和发布是的内容或者代码形式是不一样的（比如利用Grunt压缩等等)，
+这时候就需要一个存放最终发布版本的代码，这就是dist文件夹的用处。
+```
 #前端构建
 ```
 1.本前端应用遵循AMD规范，使用requirejs 进行模块管理
@@ -15,27 +22,38 @@
 		js\controllers\module.js 模块定义
 	指令和服务定义采用和Controller一样的原则
 ```
-##目录结构
-```
 
-```
 ##开发工具
 ```
- 
+npm install -g grunt-cli
+npm install -g bower
+npm install -g gulp
+
+bower init
+bower install angular-ui-layout
+
+package.json: 
+此文件被npm用于存储项目的元数据，以便将此项目发布为npm模块。
+你可以在此文件中列出项目依赖的grunt和Grunt插件，
+放置于devDependencies配置段内。
+
+Gruntfile: 
+此文件被命名为 Gruntfile.js 或 Gruntfile.coffee，
+用来配置或定义任务（task）并加载Grunt插件的。 
+此文档中提到的 Gruntfile 其实说的是一个文件，
+文件名是 Gruntfile.js 或 Gruntfile.coffee。
+
+uglify是一个文件压缩插件，项目地址：https://github.com/gruntjs/grunt-contrib-uglify
 ```
 
-##nodejs
-
-##安装bower
-	npm install -g bower
-##初始化ui组件
-	bower init
-##依赖组件
-	bower install angular-ui-layout\#bower
-##We use Karma and jshint to ensure the quality of the code
-	npm install -g gulp
-	npm install && bower install
-	gulp
+##grun插件
+```
+1).grunt-contrib-uglify：压缩js代码
+2).grunt-contrib-concat：合并js文件
+3).grunt-contrib-qunit：单元测试
+4).grunt-contrib-jshint：js代码检查
+5).grunt-contrib-watch：文件监控
+```
 ##ui-layout
 	https://github.com/angular-ui/ui-layout
 ##RequireJS
